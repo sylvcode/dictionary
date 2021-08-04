@@ -18,10 +18,16 @@
 }
 
 
-
 .Dictionary .hint {
   font-size: 14px;
   margin-top: 5px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: #E6B980;
+ color: #E6B980;
 }
+
+h1 {
+  font-family: sans-serif;
+  font-weight: lighter;
+  
+}
+
