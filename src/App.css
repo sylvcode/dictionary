@@ -2,8 +2,25 @@
   margin: 40px 0;
 }
 
-.App-logo {}
+.App-logo {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
 
 footer {
   text-align: center;
+}
+
+.App {
+background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+
+footer {
+  font-size: 36px;
+ font-family: 'Lovers Quarrel',
+ cursive;
 }
