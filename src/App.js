@@ -14,7 +14,10 @@ function App() {
           <Dictionary defaultKeyword="Sunshine" />
         </main>
       </div>
-      <footer>Coded by Sylvia</footer>
+      <footer>
+        Open source code on Github. Coded by <span>Sylvia</span> & hosted on
+        Netlify
+      </footer>
     </div>
   )
 }

@@ -8,9 +8,6 @@
   margin: 0 auto;
 }
 
-footer {
-  text-align: center;
-}
 
 .App {
 background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
@@ -20,7 +17,17 @@ background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 footer {
-  font-size: 36px;
- font-family: 'Lovers Quarrel',
- cursive;
+    text-align: center;
+  font-size: 18px;
+ font-family: Impact,
+ Haettenschweiler,
+ 'Arial Narrow Bold',
+ sans-serif;
+}
+
+span { 
+    font-family: 'Lovers Quarrel',
+    cursive;
+    font-size: 36px;
+
 }
