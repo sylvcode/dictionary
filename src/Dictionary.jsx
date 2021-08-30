@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import './Dictionary.css'
 import axios from 'axios'
 import Results from './Results'
+import { NoResults } from './NoResults'
 import Photos from './Photos'
 
 export default function Dictionary(props) {
   let [keyword, setKeyword] = useState(props.defaultKeyword)
   let [results, setResults] = useState(null)
-  let [loaded, setLoaded] = useState(false)
+  let [loading, setLoading] = useState(false)
   let [photos, setPhotos] = useState(null)
 
   function handleResponse(response) {
@@ -16,6 +17,7 @@ export default function Dictionary(props) {
 
   function handlePexelsResponse(response) {
     setPhotos(response.data.photos)
+    setLoading(false)
   }
 
   function search() {
@@ -34,6 +36,8 @@ export default function Dictionary(props) {
 
   function handleSubmit(event) {
     event.preventDefault()
+    setResults(null)
+    setLoading(true)
     search()
   }
 
@@ -41,12 +45,9 @@ export default function Dictionary(props) {
     setKeyword(event.target.value)
   }
 
-  function load() {
-    setLoaded(true)
-    search()
-  }
-
-  if (loaded) {
+  if (loading) {
+    return <p class="font-weight-bold text-center">Loading</p>
+  } else {
     return (
       <div className="Dictionary">
         <section>
@@ -56,12 +57,10 @@ export default function Dictionary(props) {
           </form>
           <div className="hint">example: fitness, love, beauty</div>
         </section>
-        <Results results={results} />
+        {results ? <Results results={results} /> : <NoResults> </NoResults>}
+
         <Photos photos={photos} />
       </div>
     )
-  } else {
-    load()
-    return 'Loading'
   }
 }

@@ -36,3 +36,8 @@ h1 {
 }
 
 
+.font-weight-bold {
+  font-weight: 800;
+   color:#e84a5f;
+   font-size: 24px;
+}
