@@ -15,7 +15,8 @@ function App() {
         </main>
       </div>
       <footer>
-        Open source code on Github. Coded by <span>Sylvia</span> & hosted on
+        Open source code on 
+       <a href="https://github.com/sylvcode/dictionary">Github</a>. Coded with 💜 by <span>Sylvia</span> & hosted on
         Netlify
       </footer>
     </div>
